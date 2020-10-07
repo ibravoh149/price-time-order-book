@@ -12,9 +12,13 @@ chai.use(chaiAsPromised);
 
 const exchange = new Exchange();
 
-checkOrCreateFile();
+checkOrCreateFile(filePath);
 
 describe("Get Quantity at price", () => {
+  before(() => {
+    fs.writeFileSync(filePath, JSON.stringify([]));
+  });
+
   after(() => {
     fs.writeFileSync(filePath, JSON.stringify([]));
   });

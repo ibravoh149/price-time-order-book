@@ -1,12 +1,12 @@
-const path = require("path");
+// const path = require("path");
 const fs = require("fs");
-const filePath = path.resolve(__dirname, "../../lib/order_book.json");
 
-const checkOrCreateFile = () => {
+const checkOrCreateFile = (path) => {
+  // const pathFile = env === "test" ? filePathTest : filePath;
   try {
-    if (!fs.existsSync(filePath)) {
+    if (!fs.existsSync(path)) {
       //file exists
-      fs.writeFileSync(filePath, JSON.stringify([]));
+      fs.writeFileSync(path, JSON.stringify([]));
     }
   } catch (err) {
     console.error(err);

@@ -10,9 +10,13 @@ const filePath = path.resolve(__dirname, "../lib/order_book.json");
 const exchange = new Exchange();
 const expect = chai.expect;
 chai.use(chaiAsPromised);
-checkOrCreateFile();
+checkOrCreateFile(filePath);
 
 describe("Sync", () => {
+  before(() => {
+    fs.writeFileSync(filePath, JSON.stringify([]));
+  });
+
   after(() => {
     fs.writeFileSync(filePath, JSON.stringify([]));
   });
