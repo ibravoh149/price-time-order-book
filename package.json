@@ -1,0 +1,18 @@
+{
+  "name": "namebase-orderbook-coding-challenge",
+  "version": "1.0.0",
+  "description": "Namebase Orderbook Coding Challenge",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.0.0-canary.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^8.1.3",
+    "shortid": "^2.2.15",
+    "workspace": "^0.0.1-preview.1"
+  }
+}
